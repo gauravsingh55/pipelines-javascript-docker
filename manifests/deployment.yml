@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: gauravsinghpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gauravsinghpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: gauravsinghpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: gauravsinghpipelinesjavascriptdocker 
+          image: test12registry12.azurecr.io/gauravsinghpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
